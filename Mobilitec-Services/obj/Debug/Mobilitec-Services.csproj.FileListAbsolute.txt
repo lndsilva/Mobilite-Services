@@ -1,0 +1,14 @@
+C:\Users\laercio.nsilva\Documents\Visual Studio 2019\Empresa-TI107\Empresa-TI107\Mobilitec-Services\bin\Debug\Mobilitec-Services.exe.config
+C:\Users\laercio.nsilva\Documents\Visual Studio 2019\Empresa-TI107\Empresa-TI107\Mobilitec-Services\bin\Debug\Mobilitec-Services.exe
+C:\Users\laercio.nsilva\Documents\Visual Studio 2019\Empresa-TI107\Empresa-TI107\Mobilitec-Services\bin\Debug\Mobilitec-Services.pdb
+C:\Users\laercio.nsilva\Documents\Visual Studio 2019\Empresa-TI107\Empresa-TI107\Mobilitec-Services\obj\Debug\Mobilitec-Services.csproj.AssemblyReference.cache
+C:\Users\laercio.nsilva\Documents\Visual Studio 2019\Empresa-TI107\Empresa-TI107\Mobilitec-Services\obj\Debug\Mobilitec_Services.Properties.Resources.resources
+C:\Users\laercio.nsilva\Documents\Visual Studio 2019\Empresa-TI107\Empresa-TI107\Mobilitec-Services\obj\Debug\Mobilitec-Services.csproj.GenerateResource.cache
+C:\Users\laercio.nsilva\Documents\Visual Studio 2019\Empresa-TI107\Empresa-TI107\Mobilitec-Services\obj\Debug\Mobilitec-Services.csproj.CoreCompileInputs.cache
+C:\Users\laercio.nsilva\Documents\Visual Studio 2019\Empresa-TI107\Empresa-TI107\Mobilitec-Services\obj\Debug\Mobilitec-Services.exe
+C:\Users\laercio.nsilva\Documents\Visual Studio 2019\Empresa-TI107\Empresa-TI107\Mobilitec-Services\obj\Debug\Mobilitec-Services.pdb
+C:\Users\laercio.nsilva\Documents\Visual Studio 2019\Empresa-TI107\Empresa-TI107\Mobilitec-Services\obj\Debug\Mobilitec_Services.frmSplash.resources
+C:\Users\laercio.nsilva\Documents\Visual Studio 2019\Empresa-TI107\Empresa-TI107\Mobilitec-Services\obj\Debug\Mobilitec_Services.frmLogin.resources
+C:\Users\laercio.nsilva\Documents\Visual Studio 2019\Empresa-TI107\Empresa-TI107\Mobilitec-Services\obj\Debug\Mobilitec_Services.frmMenuPrincipal.resources
+C:\Users\laercio.nsilva\Documents\Visual Studio 2019\Empresa-TI107\Empresa-TI107\Mobilitec-Services\obj\Debug\Mobilitec_Services.frmSoma.resources
+C:\Users\laercio.nsilva\Documents\Visual Studio 2019\Empresa-TI107\Empresa-TI107\Mobilitec-Services\obj\Debug\Mobilitec_Services.frmComponentes.resources
