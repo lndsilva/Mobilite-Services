@@ -12,3 +12,4 @@ C:\Users\laercio.nsilva\Documents\Visual Studio 2019\Empresa-TI107\Empresa-TI107
 C:\Users\laercio.nsilva\Documents\Visual Studio 2019\Empresa-TI107\Empresa-TI107\Mobilitec-Services\obj\Debug\Mobilitec_Services.frmMenuPrincipal.resources
 C:\Users\laercio.nsilva\Documents\Visual Studio 2019\Empresa-TI107\Empresa-TI107\Mobilitec-Services\obj\Debug\Mobilitec_Services.frmSoma.resources
 C:\Users\laercio.nsilva\Documents\Visual Studio 2019\Empresa-TI107\Empresa-TI107\Mobilitec-Services\obj\Debug\Mobilitec_Services.frmComponentes.resources
+C:\Users\laercio.nsilva\Documents\Visual Studio 2019\Empresa-TI107\Empresa-TI107\Mobilitec-Services\obj\Debug\Mobilitec_Services.frmCalculadoraSimples.resources
