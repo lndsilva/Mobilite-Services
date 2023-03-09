@@ -64,6 +64,12 @@
     <Compile Include="frmComponentes.Designer.cs">
       <DependentUpon>frmComponentes.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmFolhaPagamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFolhaPagamento.Designer.cs">
+      <DependentUpon>frmFolhaPagamento.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +101,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmComponentes.resx">
       <DependentUpon>frmComponentes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFolhaPagamento.resx">
+      <DependentUpon>frmFolhaPagamento.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
