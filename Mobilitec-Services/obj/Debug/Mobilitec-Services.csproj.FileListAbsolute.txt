@@ -14,3 +14,6 @@ C:\Users\laercio.nsilva\Documents\Visual Studio 2019\Empresa-TI107\Empresa-TI107
 C:\Users\laercio.nsilva\Documents\Visual Studio 2019\Empresa-TI107\Empresa-TI107\Mobilitec-Services\obj\Debug\Mobilitec_Services.frmComponentes.resources
 C:\Users\laercio.nsilva\Documents\Visual Studio 2019\Empresa-TI107\Empresa-TI107\Mobilitec-Services\obj\Debug\Mobilitec_Services.frmCalculadoraSimples.resources
 C:\Users\laercio.nsilva\Documents\Visual Studio 2019\Empresa-TI107\Empresa-TI107\Mobilitec-Services\obj\Debug\Mobilitec_Services.frmFolhaPagamento.resources
+C:\Users\laercio.nsilva\Documents\Visual Studio 2019\Empresa-TI107\Empresa-TI107\Mobilitec-Services\obj\Debug\Mobilitec_Services.frmEstruturaDecisao.resources
+C:\Users\laercio.nsilva\Documents\Visual Studio 2019\Empresa-TI107\Empresa-TI107\Mobilitec-Services\obj\Debug\Mobilitec_Services.frmEstruturaRepeticao.resources
+C:\Users\laercio.nsilva\Documents\Visual Studio 2019\Empresa-TI107\Empresa-TI107\Mobilitec-Services\obj\Debug\Mobilitec_Services.frmStringFormat.resources

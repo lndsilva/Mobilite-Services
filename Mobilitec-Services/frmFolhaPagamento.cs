@@ -54,6 +54,7 @@ namespace Mobilitec_Services
             {
                 salario = salario - 50;
                 txtSalarioFolha.Text = salario.ToString();
+                ckbPlanoSaude.Enabled = false;
 
             }
         }
