@@ -42,61 +42,80 @@ namespace Mobilitec_Services
             // btnChamados
             // 
             this.btnChamados.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnChamados.Image = ((System.Drawing.Image)(resources.GetObject("btnChamados.Image")));
             this.btnChamados.Location = new System.Drawing.Point(37, 46);
             this.btnChamados.Name = "btnChamados";
             this.btnChamados.Size = new System.Drawing.Size(209, 190);
             this.btnChamados.TabIndex = 0;
             this.btnChamados.Text = "&Chamados";
+            this.btnChamados.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnChamados.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnChamados.UseVisualStyleBackColor = true;
             // 
             // btnFuncionarios
             // 
             this.btnFuncionarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFuncionarios.Image = ((System.Drawing.Image)(resources.GetObject("btnFuncionarios.Image")));
             this.btnFuncionarios.Location = new System.Drawing.Point(290, 46);
             this.btnFuncionarios.Name = "btnFuncionarios";
             this.btnFuncionarios.Size = new System.Drawing.Size(209, 190);
             this.btnFuncionarios.TabIndex = 1;
             this.btnFuncionarios.Text = "&Funcionários";
+            this.btnFuncionarios.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnFuncionarios.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnFuncionarios.UseVisualStyleBackColor = true;
             // 
             // btnClientes
             // 
             this.btnClientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClientes.Image = ((System.Drawing.Image)(resources.GetObject("btnClientes.Image")));
             this.btnClientes.Location = new System.Drawing.Point(540, 46);
             this.btnClientes.Name = "btnClientes";
             this.btnClientes.Size = new System.Drawing.Size(209, 190);
             this.btnClientes.TabIndex = 2;
             this.btnClientes.Text = "C&lientes";
+            this.btnClientes.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnClientes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnClientes.UseVisualStyleBackColor = true;
+            this.btnClientes.Click += new System.EventHandler(this.btnClientes_Click);
             // 
             // btnSAC
             // 
             this.btnSAC.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSAC.Image = ((System.Drawing.Image)(resources.GetObject("btnSAC.Image")));
             this.btnSAC.Location = new System.Drawing.Point(540, 269);
             this.btnSAC.Name = "btnSAC";
             this.btnSAC.Size = new System.Drawing.Size(209, 190);
             this.btnSAC.TabIndex = 5;
             this.btnSAC.Text = "S&AC";
+            this.btnSAC.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnSAC.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnSAC.UseVisualStyleBackColor = true;
             // 
             // btnServicos
             // 
             this.btnServicos.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnServicos.Image = ((System.Drawing.Image)(resources.GetObject("btnServicos.Image")));
             this.btnServicos.Location = new System.Drawing.Point(290, 269);
             this.btnServicos.Name = "btnServicos";
             this.btnServicos.Size = new System.Drawing.Size(209, 190);
             this.btnServicos.TabIndex = 4;
             this.btnServicos.Text = "&Serviços";
+            this.btnServicos.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnServicos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnServicos.UseVisualStyleBackColor = true;
             // 
             // btnContatos
             // 
             this.btnContatos.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnContatos.Image = ((System.Drawing.Image)(resources.GetObject("btnContatos.Image")));
             this.btnContatos.Location = new System.Drawing.Point(37, 269);
             this.btnContatos.Name = "btnContatos";
             this.btnContatos.Size = new System.Drawing.Size(209, 190);
             this.btnContatos.TabIndex = 3;
             this.btnContatos.Text = "Con&tatos";
+            this.btnContatos.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnContatos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnContatos.UseVisualStyleBackColor = true;
             // 
             // btnVoltar
@@ -107,6 +126,7 @@ namespace Mobilitec_Services
             this.btnVoltar.TabIndex = 6;
             this.btnVoltar.Text = "&Voltar";
             this.btnVoltar.UseVisualStyleBackColor = true;
+            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
             // 
             // frmMenuPrincipal
             // 
@@ -126,6 +146,7 @@ namespace Mobilitec_Services
             this.Name = "frmMenuPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Mobile-Services";
+            this.Load += new System.EventHandler(this.frmMenuPrincipal_Load);
             this.ResumeLayout(false);
 
         }

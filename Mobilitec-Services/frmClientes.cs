@@ -11,10 +11,9 @@ using System.Runtime.InteropServices;
 using System.Globalization;
 using System.Text.RegularExpressions;
 
-
 namespace Mobilitec_Services
 {
-    public partial class frmMenuPrincipal : Form
+    public partial class frmClientes : Form
     {
         //Criando variáveis para controle do menu
         const int MF_BYCOMMAND = 0X400;
@@ -25,30 +24,16 @@ namespace Mobilitec_Services
         [DllImport("user32")]
         static extern int GetMenuItemCount(IntPtr hWnd);
 
-        public frmMenuPrincipal()
+        public frmClientes()
         {
             InitializeComponent();
         }
 
-        private void btnVoltar_Click(object sender, EventArgs e)
-        {
-            frmLogin abrir = new frmLogin();
-            abrir.Show();
-            this.Hide();
-        }
-
-        private void frmMenuPrincipal_Load(object sender, EventArgs e)
+        private void frmClientes_Load(object sender, EventArgs e)
         {
             IntPtr hMenu = GetSystemMenu(this.Handle, false);
             int MenuCount = GetMenuItemCount(hMenu) - 1;
             RemoveMenu(hMenu, MenuCount, MF_BYCOMMAND);
-        }
-
-        private void btnClientes_Click(object sender, EventArgs e)
-        {
-            frmClientes abrir = new frmClientes();
-            abrir.Show();
-            this.Hide();
         }
     }
 }

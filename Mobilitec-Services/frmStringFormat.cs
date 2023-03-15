@@ -30,11 +30,7 @@ namespace Mobilitec_Services
         {
             if (e.KeyCode == Keys.Enter)
             {
-                MessageBox.Show("Teste");
-            }
-            else
-            {
-
+                btnMensagem.Focus();
             }
         }
     }

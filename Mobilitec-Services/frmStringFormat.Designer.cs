@@ -48,7 +48,7 @@ namespace Mobilitec_Services
             this.btnMensagem.Location = new System.Drawing.Point(247, 285);
             this.btnMensagem.Name = "btnMensagem";
             this.btnMensagem.Size = new System.Drawing.Size(212, 68);
-            this.btnMensagem.TabIndex = 0;
+            this.btnMensagem.TabIndex = 5;
             this.btnMensagem.Text = "Mostrar";
             this.btnMensagem.UseVisualStyleBackColor = true;
             this.btnMensagem.Click += new System.EventHandler(this.btnMensagem_Click);
@@ -69,7 +69,7 @@ namespace Mobilitec_Services
             this.txtValor.Location = new System.Drawing.Point(84, 106);
             this.txtValor.Name = "txtValor";
             this.txtValor.Size = new System.Drawing.Size(100, 26);
-            this.txtValor.TabIndex = 2;
+            this.txtValor.TabIndex = 0;
             this.txtValor.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtValor_KeyDown);
             // 
             // txtResposta
@@ -79,7 +79,7 @@ namespace Mobilitec_Services
             this.txtResposta.Location = new System.Drawing.Point(84, 200);
             this.txtResposta.Name = "txtResposta";
             this.txtResposta.Size = new System.Drawing.Size(100, 26);
-            this.txtResposta.TabIndex = 4;
+            this.txtResposta.TabIndex = 1;
             // 
             // label1
             // 
@@ -98,7 +98,7 @@ namespace Mobilitec_Services
             this.mkCPF.Mask = "000,000,000-00";
             this.mkCPF.Name = "mkCPF";
             this.mkCPF.Size = new System.Drawing.Size(121, 26);
-            this.mkCPF.TabIndex = 5;
+            this.mkCPF.TabIndex = 2;
             // 
             // lblCPF
             // 
@@ -127,13 +127,13 @@ namespace Mobilitec_Services
             this.dtpData.Location = new System.Drawing.Point(292, 200);
             this.dtpData.Name = "dtpData";
             this.dtpData.Size = new System.Drawing.Size(106, 26);
-            this.dtpData.TabIndex = 9;
+            this.dtpData.TabIndex = 3;
             // 
             // monthCalendar1
             // 
             this.monthCalendar1.Location = new System.Drawing.Point(509, 94);
             this.monthCalendar1.Name = "monthCalendar1";
-            this.monthCalendar1.TabIndex = 10;
+            this.monthCalendar1.TabIndex = 4;
             // 
             // frmStringFormat
             // 
