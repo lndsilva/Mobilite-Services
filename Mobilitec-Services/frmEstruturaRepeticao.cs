@@ -17,7 +17,7 @@ namespace Mobilitec_Services
             InitializeComponent();
         }
 
-        private void btnLimpar_Click(object sender, EventArgs e)
+        public void limparCampos()
         {
             txtContador.Clear();
             txtSoma.Clear();
@@ -26,6 +26,11 @@ namespace Mobilitec_Services
             ltbSomatoria.Items.Clear();
             txtContador.Focus();
             cbbSomatoria.Items.Clear();
+        }
+
+        private void btnLimpar_Click(object sender, EventArgs e)
+        {
+            limparCampos();
         }
 
         private void btnSair_Click(object sender, EventArgs e)

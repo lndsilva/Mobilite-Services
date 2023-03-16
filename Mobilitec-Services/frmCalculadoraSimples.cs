@@ -38,6 +38,11 @@ namespace Mobilitec_Services
 
         }
 
+        public double somaValor(double num1, double num2)
+        {
+            return (num1 + num2);
+        }
+
         private void btnCalcular_Click(object sender, EventArgs e)
         {
             double num1, num2, resultado = 0;
@@ -57,7 +62,7 @@ namespace Mobilitec_Services
 
                 if (rdbAdicao.Checked)
                 {
-                    resultado = num1 + num2;
+                    resultado = somaValor(num1,num2);
                 }
                 if (rdbsubtracao.Checked)
                 {

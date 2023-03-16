@@ -35,6 +35,7 @@ namespace Mobilitec_Services
             frmLogin abrir = new frmLogin();
             abrir.Show();
             this.Hide();
+            
         }
 
         private void frmMenuPrincipal_Load(object sender, EventArgs e)

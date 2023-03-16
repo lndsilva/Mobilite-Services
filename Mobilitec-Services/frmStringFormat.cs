@@ -17,12 +17,17 @@ namespace Mobilitec_Services
             InitializeComponent();
         }
 
+
         private void btnMensagem_Click(object sender, EventArgs e)
         {
-            double valor = Convert.ToDouble(txtValor.Text);
+            Pessoa ps = new Pessoa();
+
+            ps.andar();
+            
+                        
+                double valor = Convert.ToDouble(txtValor.Text);
 
             txtResposta.Text = string.Format("{0:c}", valor);
-
 
         }
 

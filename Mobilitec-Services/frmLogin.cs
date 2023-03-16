@@ -19,6 +19,9 @@ namespace Mobilitec_Services
     //isso é uma classe do sistema
     public partial class frmLogin : Form
     {
+
+        public string nome;
+
         //Criando variáveis para controle do menu
         const int MF_BYCOMMAND = 0X400;
         [DllImport("user32")]
@@ -32,6 +35,7 @@ namespace Mobilitec_Services
         public frmLogin()
         {
             InitializeComponent();
+
         }
         /*
          * autor:
