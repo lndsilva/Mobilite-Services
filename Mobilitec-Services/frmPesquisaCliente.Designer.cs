@@ -31,10 +31,10 @@ namespace Mobilitec_Services
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPesquisaCliente));
             this.gpbPesquisar = new System.Windows.Forms.GroupBox();
-            this.rdbCodigo = new System.Windows.Forms.RadioButton();
-            this.rdbNome = new System.Windows.Forms.RadioButton();
-            this.lblDescricao = new System.Windows.Forms.Label();
             this.txtDescricao = new System.Windows.Forms.TextBox();
+            this.lblDescricao = new System.Windows.Forms.Label();
+            this.rdbNome = new System.Windows.Forms.RadioButton();
+            this.rdbCodigo = new System.Windows.Forms.RadioButton();
             this.ltbResultadoPesquisa = new System.Windows.Forms.ListBox();
             this.lblResultadoPesquisa = new System.Windows.Forms.Label();
             this.btnPesquisar = new System.Windows.Forms.Button();
@@ -56,16 +56,23 @@ namespace Mobilitec_Services
             this.gpbPesquisar.TabStop = false;
             this.gpbPesquisar.Text = "Informações da pesquisa";
             // 
-            // rdbCodigo
+            // txtDescricao
             // 
-            this.rdbCodigo.AutoSize = true;
-            this.rdbCodigo.Location = new System.Drawing.Point(51, 38);
-            this.rdbCodigo.Name = "rdbCodigo";
-            this.rdbCodigo.Size = new System.Drawing.Size(77, 24);
-            this.rdbCodigo.TabIndex = 1;
-            this.rdbCodigo.Text = "Código";
-            this.rdbCodigo.UseVisualStyleBackColor = true;
-            this.rdbCodigo.CheckedChanged += new System.EventHandler(this.rdbCodigo_CheckedChanged);
+            this.txtDescricao.Enabled = false;
+            this.txtDescricao.Location = new System.Drawing.Point(137, 90);
+            this.txtDescricao.MaxLength = 100;
+            this.txtDescricao.Name = "txtDescricao";
+            this.txtDescricao.Size = new System.Drawing.Size(273, 26);
+            this.txtDescricao.TabIndex = 3;
+            // 
+            // lblDescricao
+            // 
+            this.lblDescricao.AutoSize = true;
+            this.lblDescricao.Location = new System.Drawing.Point(51, 96);
+            this.lblDescricao.Name = "lblDescricao";
+            this.lblDescricao.Size = new System.Drawing.Size(80, 20);
+            this.lblDescricao.TabIndex = 2;
+            this.lblDescricao.Text = "Descrição";
             // 
             // rdbNome
             // 
@@ -78,23 +85,16 @@ namespace Mobilitec_Services
             this.rdbNome.UseVisualStyleBackColor = true;
             this.rdbNome.CheckedChanged += new System.EventHandler(this.rdbNome_CheckedChanged);
             // 
-            // lblDescricao
+            // rdbCodigo
             // 
-            this.lblDescricao.AutoSize = true;
-            this.lblDescricao.Location = new System.Drawing.Point(51, 96);
-            this.lblDescricao.Name = "lblDescricao";
-            this.lblDescricao.Size = new System.Drawing.Size(80, 20);
-            this.lblDescricao.TabIndex = 2;
-            this.lblDescricao.Text = "Descrição";
-            // 
-            // txtDescricao
-            // 
-            this.txtDescricao.Enabled = false;
-            this.txtDescricao.Location = new System.Drawing.Point(137, 90);
-            this.txtDescricao.MaxLength = 100;
-            this.txtDescricao.Name = "txtDescricao";
-            this.txtDescricao.Size = new System.Drawing.Size(273, 26);
-            this.txtDescricao.TabIndex = 3;
+            this.rdbCodigo.AutoSize = true;
+            this.rdbCodigo.Location = new System.Drawing.Point(51, 38);
+            this.rdbCodigo.Name = "rdbCodigo";
+            this.rdbCodigo.Size = new System.Drawing.Size(77, 24);
+            this.rdbCodigo.TabIndex = 1;
+            this.rdbCodigo.Text = "Código";
+            this.rdbCodigo.UseVisualStyleBackColor = true;
+            this.rdbCodigo.CheckedChanged += new System.EventHandler(this.rdbCodigo_CheckedChanged);
             // 
             // ltbResultadoPesquisa
             // 
@@ -105,6 +105,7 @@ namespace Mobilitec_Services
             this.ltbResultadoPesquisa.Name = "ltbResultadoPesquisa";
             this.ltbResultadoPesquisa.Size = new System.Drawing.Size(459, 144);
             this.ltbResultadoPesquisa.TabIndex = 4;
+            this.ltbResultadoPesquisa.SelectedIndexChanged += new System.EventHandler(this.ltbResultadoPesquisa_SelectedIndexChanged);
             // 
             // lblResultadoPesquisa
             // 

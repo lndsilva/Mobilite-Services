@@ -27,8 +27,14 @@ namespace Mobilitec_Services
         public frmClientes()
         {
             InitializeComponent();
-
             desabilitarCampos();
+        }
+
+        public frmClientes(string nome)
+        {
+            InitializeComponent();
+            desabilitarCampos();
+            txtNome.Text = nome;
         }
 
         private void frmClientes_Load(object sender, EventArgs e)
@@ -140,6 +146,14 @@ namespace Mobilitec_Services
                 btnNovo.Enabled = true;
 
             }
+        }
+
+        private void btnPesquisar_Click(object sender, EventArgs e)
+        {
+            //abrir a janela de pesquisar
+            frmPesquisaCliente abrir = new frmPesquisaCliente();
+            abrir.ShowDialog();
+            this.Hide();
         }
     }
 }

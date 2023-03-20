@@ -39,6 +39,9 @@ namespace Mobilitec_Services
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.btnNovo = new System.Windows.Forms.Button();
             this.gpbInforCliente = new System.Windows.Forms.GroupBox();
+            this.lblCidade = new System.Windows.Forms.Label();
+            this.txtBairro = new System.Windows.Forms.TextBox();
+            this.lblBairro = new System.Windows.Forms.Label();
             this.txtNumero = new System.Windows.Forms.TextBox();
             this.lblNumero = new System.Windows.Forms.Label();
             this.cbbEstado = new System.Windows.Forms.ComboBox();
@@ -60,9 +63,6 @@ namespace Mobilitec_Services
             this.lblNome = new System.Windows.Forms.Label();
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.lblCodigo = new System.Windows.Forms.Label();
-            this.txtBairro = new System.Windows.Forms.TextBox();
-            this.lblBairro = new System.Windows.Forms.Label();
-            this.lblCidade = new System.Windows.Forms.Label();
             this.pnlMenu.SuspendLayout();
             this.gpbInforCliente.SuspendLayout();
             this.SuspendLayout();
@@ -122,6 +122,7 @@ namespace Mobilitec_Services
             this.btnPesquisar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnPesquisar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnPesquisar.UseVisualStyleBackColor = true;
+            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
             // 
             // btnExcluir
             // 
@@ -210,6 +211,32 @@ namespace Mobilitec_Services
             this.gpbInforCliente.TabIndex = 0;
             this.gpbInforCliente.TabStop = false;
             this.gpbInforCliente.Text = "Informações do Cliente";
+            // 
+            // lblCidade
+            // 
+            this.lblCidade.AutoSize = true;
+            this.lblCidade.Location = new System.Drawing.Point(443, 312);
+            this.lblCidade.Name = "lblCidade";
+            this.lblCidade.Size = new System.Drawing.Size(59, 20);
+            this.lblCidade.TabIndex = 23;
+            this.lblCidade.Text = "Cidade";
+            // 
+            // txtBairro
+            // 
+            this.txtBairro.Location = new System.Drawing.Point(95, 306);
+            this.txtBairro.MaxLength = 100;
+            this.txtBairro.Name = "txtBairro";
+            this.txtBairro.Size = new System.Drawing.Size(319, 26);
+            this.txtBairro.TabIndex = 10;
+            // 
+            // lblBairro
+            // 
+            this.lblBairro.AutoSize = true;
+            this.lblBairro.Location = new System.Drawing.Point(30, 312);
+            this.lblBairro.Name = "lblBairro";
+            this.lblBairro.Size = new System.Drawing.Size(51, 20);
+            this.lblBairro.TabIndex = 22;
+            this.lblBairro.Text = "Bairro";
             // 
             // txtNumero
             // 
@@ -389,32 +416,6 @@ namespace Mobilitec_Services
             this.lblCodigo.Size = new System.Drawing.Size(59, 20);
             this.lblCodigo.TabIndex = 0;
             this.lblCodigo.Text = "Código";
-            // 
-            // txtBairro
-            // 
-            this.txtBairro.Location = new System.Drawing.Point(95, 306);
-            this.txtBairro.MaxLength = 100;
-            this.txtBairro.Name = "txtBairro";
-            this.txtBairro.Size = new System.Drawing.Size(319, 26);
-            this.txtBairro.TabIndex = 10;
-            // 
-            // lblBairro
-            // 
-            this.lblBairro.AutoSize = true;
-            this.lblBairro.Location = new System.Drawing.Point(30, 312);
-            this.lblBairro.Name = "lblBairro";
-            this.lblBairro.Size = new System.Drawing.Size(51, 20);
-            this.lblBairro.TabIndex = 22;
-            this.lblBairro.Text = "Bairro";
-            // 
-            // lblCidade
-            // 
-            this.lblCidade.AutoSize = true;
-            this.lblCidade.Location = new System.Drawing.Point(443, 312);
-            this.lblCidade.Name = "lblCidade";
-            this.lblCidade.Size = new System.Drawing.Size(59, 20);
-            this.lblCidade.TabIndex = 23;
-            this.lblCidade.Text = "Cidade";
             // 
             // frmClientes
             // 

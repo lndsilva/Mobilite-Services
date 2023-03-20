@@ -58,6 +58,11 @@ namespace Mobilitec_Services
                 txtDescricao.Focus();
 
             }
+            else
+            {
+                ltbResultadoPesquisa.Items.Clear();
+                ltbResultadoPesquisa.Items.Add(txtDescricao.Text);
+            }
 
         }
 
@@ -71,6 +76,15 @@ namespace Mobilitec_Services
         {
             txtDescricao.Enabled = true;
             txtDescricao.Focus();
+        }
+
+        private void ltbResultadoPesquisa_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string resp = ltbResultadoPesquisa.SelectedItem.ToString();
+
+            frmClientes abrir = new frmClientes(resp);
+            abrir.Show();
+            this.Hide();
         }
     }
 }
