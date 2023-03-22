@@ -29,11 +29,13 @@ namespace Mobilitec_Services
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSplash));
             this.pcbLogo = new System.Windows.Forms.PictureBox();
             this.lblPorcentagem = new System.Windows.Forms.Label();
             this.pgbCarregando = new System.Windows.Forms.ProgressBar();
             this.lblCarregando = new System.Windows.Forms.Label();
+            this.tmrSplash = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -73,6 +75,12 @@ namespace Mobilitec_Services
             this.lblCarregando.Size = new System.Drawing.Size(105, 20);
             this.lblCarregando.TabIndex = 3;
             this.lblCarregando.Text = "Carregando...";
+            this.lblCarregando.Visible = false;
+            // 
+            // tmrSplash
+            // 
+            this.tmrSplash.Enabled = true;
+            this.tmrSplash.Tick += new System.EventHandler(this.tmrSplash_Tick);
             // 
             // frmSplash
             // 
@@ -101,5 +109,6 @@ namespace Mobilitec_Services
         private System.Windows.Forms.Label lblPorcentagem;
         private System.Windows.Forms.ProgressBar pgbCarregando;
         private System.Windows.Forms.Label lblCarregando;
+        private System.Windows.Forms.Timer tmrSplash;
     }
 }

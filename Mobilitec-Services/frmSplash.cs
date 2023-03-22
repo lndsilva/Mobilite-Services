@@ -16,5 +16,26 @@ namespace Mobilitec_Services
         {
             InitializeComponent();
         }
+
+        private void tmrSplash_Tick(object sender, EventArgs e)
+        {
+
+            if (pgbCarregando.Value < 100)
+            {
+                pgbCarregando.Value = pgbCarregando.Value + 10;
+                lblPorcentagem.Text = pgbCarregando.Value.ToString() + "%";
+                lblCarregando.Visible = true;
+            }
+            else
+            {
+                frmLogin abrir = new frmLogin();
+                abrir.Show();
+                this.Hide();
+
+                //desabilitando o timer
+                tmrSplash.Enabled = false;
+            }
+            
+        }
     }
 }

@@ -136,6 +136,7 @@ namespace Mobilitec_Services
             this.btnExcluir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnExcluir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // btnAlterar
             // 
@@ -149,6 +150,7 @@ namespace Mobilitec_Services
             this.btnAlterar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAlterar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAlterar.UseVisualStyleBackColor = true;
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
             // btnCadastrar
             // 
@@ -287,6 +289,7 @@ namespace Mobilitec_Services
             this.mkbCEP.Name = "mkbCEP";
             this.mkbCEP.Size = new System.Drawing.Size(86, 26);
             this.mkbCEP.TabIndex = 9;
+            this.mkbCEP.KeyDown += new System.Windows.Forms.KeyEventHandler(this.mkbCEP_KeyDown);
             // 
             // lblCEP
             // 

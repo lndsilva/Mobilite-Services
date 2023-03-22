@@ -35,6 +35,7 @@ namespace Mobilitec_Services
             InitializeComponent();
             desabilitarCampos();
             txtNome.Text = nome;
+            habilitarCamposPesquisa();
         }
 
         private void frmClientes_Load(object sender, EventArgs e)
@@ -72,7 +73,31 @@ namespace Mobilitec_Services
             btnLimpar.Enabled = false;
         }
 
-        //criando método para habilitarCamposNovo
+        //criando método para habilitarCamposPesquisa
+        public void habilitarCamposPesquisa()
+        {
+            txtCodigo.Enabled = false;
+            txtNome.Enabled = true;
+            txtEmail.Enabled = true;
+            txtEndereco.Enabled = true;
+            txtNumero.Enabled = true;
+            txtBairro.Enabled = true;
+            txtCidade.Enabled = true;
+            cbbEstado.Enabled = true;
+            cbbSexo.Enabled = true;
+            mkbCEP.Enabled = true;
+            mkbCPF.Enabled = true;
+            mkbTelefone.Enabled = true;
+
+            btnCadastrar.Enabled = false;
+            btnAlterar.Enabled = true;
+            btnExcluir.Enabled = true;
+            btnLimpar.Enabled = true;
+            btnNovo.Enabled = false;
+            btnPesquisar.Enabled = true;
+
+            txtNome.Focus();
+        }
         public void habilitarCamposNovo()
         {
             txtCodigo.Enabled = false;
@@ -144,16 +169,70 @@ namespace Mobilitec_Services
                 limparCampos();
                 desabilitarCampos();
                 btnNovo.Enabled = true;
-
             }
         }
-
         private void btnPesquisar_Click(object sender, EventArgs e)
         {
             //abrir a janela de pesquisar
             frmPesquisaCliente abrir = new frmPesquisaCliente();
             abrir.ShowDialog();
             this.Hide();
+        }
+        private void btnAlterar_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Registro alterado com sucesso.",
+                "Mensagem do sistema",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Information,
+                MessageBoxDefaultButton.Button1);
+            desabilitarCampos();
+            limparCampos();
+
+        }
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            DialogResult resposta = MessageBox.Show("Deseja excluir?",
+                "Mensagem do sistema", MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question,
+                MessageBoxDefaultButton.Button2);
+
+            if (resposta == DialogResult.Yes)
+            {
+                //Vai excluir
+                MessageBox.Show("Excluido com sucesso",
+                "Mensagem do sistema", MessageBoxButtons.OK,
+                MessageBoxIcon.Information,
+                MessageBoxDefaultButton.Button1);
+                btnNovo.Enabled = true;
+
+                limparCampos();
+                desabilitarCampos();
+            }
+            else
+            {
+                txtNome.Focus();
+            }
+
+        }
+        public void buscaCEP(string numCEP)
+        {
+            WSCorreios.AtendeClienteClient ws = new WSCorreios.AtendeClienteClient();
+
+            WSCorreios.enderecoERP endereco = ws.consultaCEP(numCEP);
+
+            txtEndereco.Text = endereco.end;
+            txtBairro.Text = endereco.bairro;
+            txtCidade.Text = endereco.cidade;
+            cbbEstado.Text = endereco.uf;
+
+        }
+        private void mkbCEP_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                buscaCEP(mkbCEP.Text);
+                txtNumero.Focus();
+            }
         }
     }
 }

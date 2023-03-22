@@ -86,5 +86,20 @@ namespace Mobilitec_Services
             abrir.Show();
             this.Hide();
         }
+
+        private void btnVoltar_Click(object sender, EventArgs e)
+        {
+            frmClientes abrir = new frmClientes();
+            abrir.Show();
+            this.Hide();
+        }
+
+        private void txtDescricao_TextChanged(object sender, EventArgs e)
+        {
+            
+            
+            //ltbResultadoPesquisa.Items.Add(txtDescricao.Text);
+
+        }
     }
 }
