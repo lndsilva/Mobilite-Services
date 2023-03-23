@@ -16,7 +16,7 @@ namespace Mobilitec_Services
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmTestaBanco());
+            Application.Run(new frmClientes());
         }
     }
 }

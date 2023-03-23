@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using System.Globalization;
 using System.Text.RegularExpressions;
+using MySql.Data.MySqlClient;
 
 namespace Mobilitec_Services
 {
@@ -164,12 +165,41 @@ namespace Mobilitec_Services
             }
             else
             {
-                MessageBox.Show("Cadastrado com sucesso.", "Mensagem do Sistema",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                cadastrarCliente();
                 limparCampos();
                 desabilitarCampos();
                 btnNovo.Enabled = true;
+                
             }
+        }
+        //Cadastro de cliente
+        public void cadastrarCliente()
+        {
+            MySqlCommand comm = new MySqlCommand();
+            comm.CommandText = "insert into tbClientes (nome,email,cpf,telefone,sexo,endereco,numero,cep,bairro,cidade,estado)" +
+                "values(@nome,@email,@cpf,@telefone,@sexo,@endereco,@numero,@cep,@bairro,@cidade,@estado);";
+
+            comm.CommandType = CommandType.Text;
+
+            comm.Parameters.Clear();
+            comm.Parameters.Add("@nome", MySqlDbType.VarChar, 100).Value = txtNome.Text;
+            comm.Parameters.Add("@email", MySqlDbType.VarChar, 100).Value = txtEmail.Text;
+            comm.Parameters.Add("@cpf", MySqlDbType.VarChar, 14).Value = mkbCPF.Text;
+            comm.Parameters.Add("@telefone", MySqlDbType.VarChar, 15).Value = mkbTelefone.Text;
+            comm.Parameters.Add("@sexo", MySqlDbType.VarChar, 1).Value = cbbSexo.Text;
+            comm.Parameters.Add("@endereco", MySqlDbType.VarChar, 100).Value = txtEndereco.Text;
+            comm.Parameters.Add("@numero", MySqlDbType.VarChar, 10).Value = txtNumero.Text;
+            comm.Parameters.Add("@cep", MySqlDbType.VarChar, 9).Value = mkbCEP.Text;
+            comm.Parameters.Add("@bairro", MySqlDbType.VarChar, 100).Value = txtBairro.Text;
+            comm.Parameters.Add("@cidade", MySqlDbType.VarChar, 100).Value = txtCidade.Text;
+            comm.Parameters.Add("@estado", MySqlDbType.VarChar, 2).Value = cbbEstado.Text;
+
+            comm.Connection = Conexao.obterConexao();
+            int res = comm.ExecuteNonQuery();
+
+            MessageBox.Show("Cadastrado com sucesso!!!");
+
+            Conexao.fecharConexao();
         }
         private void btnPesquisar_Click(object sender, EventArgs e)
         {
