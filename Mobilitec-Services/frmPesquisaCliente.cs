@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace Mobilitec_Services
 {
@@ -60,10 +61,55 @@ namespace Mobilitec_Services
             }
             else
             {
-                ltbResultadoPesquisa.Items.Clear();
-                ltbResultadoPesquisa.Items.Add(txtDescricao.Text);
+                if (rdbCodigo.Checked)
+                {
+                    pesquisaPorCodigo(Convert.ToInt32(txtDescricao.Text));
+                }
+                if (rdbNome.Checked)
+                {
+                    pesquisaPorNome(txtDescricao.Text);
+                }
             }
 
+        }
+
+        //pesquisa por codigo
+        public void pesquisaPorCodigo(int codigoCliente)
+        {
+            MySqlCommand comm = new MySqlCommand();
+            comm.CommandText = "select * from tbClientes where codCli = " + codigoCliente + ";";
+            comm.CommandType = CommandType.Text;
+
+            comm.Connection = Conexao.obterConexao();
+
+            MySqlDataReader DR;
+            DR = comm.ExecuteReader();
+            DR.Read();
+            ltbResultadoPesquisa.Items.Clear();
+            ltbResultadoPesquisa.Items.Add(DR.GetString(1));
+
+            Conexao.fecharConexao();
+        }
+
+        public void pesquisaPorNome(string nome)
+        {
+            MySqlCommand comm = new MySqlCommand();
+            comm.CommandText = "select * from tbClientes where nome like '%" + nome + "%';";
+            comm.CommandType = CommandType.Text;
+
+            comm.Connection = Conexao.obterConexao();
+
+            MySqlDataReader DR;
+            DR = comm.ExecuteReader();
+            
+            ltbResultadoPesquisa.Items.Clear();
+            
+            while (DR.Read())
+            {
+                ltbResultadoPesquisa.Items.Add(DR.GetString(1));
+            }
+
+            Conexao.fecharConexao();
         }
 
         private void rdbCodigo_CheckedChanged(object sender, EventArgs e)
@@ -96,8 +142,8 @@ namespace Mobilitec_Services
 
         private void txtDescricao_TextChanged(object sender, EventArgs e)
         {
-            
-            
+
+
             //ltbResultadoPesquisa.Items.Add(txtDescricao.Text);
 
         }

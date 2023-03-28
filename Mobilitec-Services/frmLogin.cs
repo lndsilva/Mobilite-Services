@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using System.Globalization;
 using System.Text.RegularExpressions;
-
+using MySql.Data.MySqlClient;
 
 //comentário de linha
 
@@ -49,6 +49,29 @@ namespace Mobilitec_Services
             Application.Exit();
         }
 
+        public bool validaUsuario(string nomeUsu, string senhaUsu)
+        {
+            MySqlCommand comm = new MySqlCommand();
+            comm.CommandText = "select * from tbusuarios where nomeUsu = @nomeUsu and senhaUsu = @senhaUsu;";
+            comm.CommandType = CommandType.Text;
+
+            comm.Parameters.Clear();
+
+            comm.Parameters.Add("@nomeUsu", MySqlDbType.VarChar, 20).Value = nomeUsu;
+            comm.Parameters.Add("@senhaUsu", MySqlDbType.VarChar, 20).Value = senhaUsu;
+
+            comm.Connection = Conexao.obterConexao();
+            MySqlDataReader DR;
+            DR = comm.ExecuteReader();
+
+            bool resultado = DR.HasRows;
+
+            return resultado;
+
+            Conexao.fecharConexao();
+
+        }
+
         private void btnEntrar_Click(object sender, EventArgs e)
         {
             string usuario, senha;
@@ -56,7 +79,7 @@ namespace Mobilitec_Services
             usuario = txtUsuario.Text;
             senha = txtSenha.Text;
 
-            if (usuario.Equals("senac") && senha.Equals("senac"))
+            if (validaUsuario(usuario, senha))
             {
                 frmMenuPrincipal abrir = new frmMenuPrincipal();
                 abrir.Show();

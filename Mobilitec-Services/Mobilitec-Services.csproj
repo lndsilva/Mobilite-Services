@@ -134,6 +134,12 @@
     <Compile Include="frmFolhaPagamento.Designer.cs">
       <DependentUpon>frmFolhaPagamento.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmFuncionarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFuncionarios.Designer.cs">
+      <DependentUpon>frmFuncionarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -151,6 +157,12 @@
     </Compile>
     <Compile Include="frmPesquisaCliente.Designer.cs">
       <DependentUpon>frmPesquisaCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPesquisaFuncionarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPesquisaFuncionarios.Designer.cs">
+      <DependentUpon>frmPesquisaFuncionarios.cs</DependentUpon>
     </Compile>
     <Compile Include="frmSoma.cs">
       <SubType>Form</SubType>
@@ -176,6 +188,12 @@
     <Compile Include="frmTestaBanco.Designer.cs">
       <DependentUpon>frmTestaBanco.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUsuarios.Designer.cs">
+      <DependentUpon>frmUsuarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="Pessoa.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -197,6 +215,9 @@
     <EmbeddedResource Include="frmFolhaPagamento.resx">
       <DependentUpon>frmFolhaPagamento.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmFuncionarios.resx">
+      <DependentUpon>frmFuncionarios.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -205,6 +226,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmPesquisaCliente.resx">
       <DependentUpon>frmPesquisaCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPesquisaFuncionarios.resx">
+      <DependentUpon>frmPesquisaFuncionarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSoma.resx">
       <DependentUpon>frmSoma.cs</DependentUpon>
@@ -217,6 +241,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmTestaBanco.resx">
       <DependentUpon>frmTestaBanco.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUsuarios.resx">
+      <DependentUpon>frmUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

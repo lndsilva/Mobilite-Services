@@ -84,7 +84,7 @@ namespace Mobilitec_Services
             // 
             this.txtSenha.Font = new System.Drawing.Font("Wingdings", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.txtSenha.Location = new System.Drawing.Point(413, 264);
-            this.txtSenha.MaxLength = 10;
+            this.txtSenha.MaxLength = 30;
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.PasswordChar = 'l';
             this.txtSenha.Size = new System.Drawing.Size(255, 25);

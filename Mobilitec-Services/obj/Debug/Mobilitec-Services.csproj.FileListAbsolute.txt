@@ -43,3 +43,6 @@ C:\Users\laercio.nsilva\Documents\Visual Studio 2019\Empresa-TI107\Empresa-TI107
 C:\Users\laercio.nsilva\Documents\Visual Studio 2019\Empresa-TI107\Empresa-TI107\Mobilitec-Services\obj\Debug\Mobilitec-Services.csproj.CopyComplete
 C:\Users\laercio.nsilva\Documents\Visual Studio 2019\Empresa-TI107\Empresa-TI107\Mobilitec-Services\obj\Debug\Mobilitec-Services.exe
 C:\Users\laercio.nsilva\Documents\Visual Studio 2019\Empresa-TI107\Empresa-TI107\Mobilitec-Services\obj\Debug\Mobilitec-Services.pdb
+C:\Users\laercio.nsilva\Documents\Visual Studio 2019\Empresa-TI107\Empresa-TI107\Mobilitec-Services\obj\Debug\Mobilitec_Services.frmFuncionarios.resources
+C:\Users\laercio.nsilva\Documents\Visual Studio 2019\Empresa-TI107\Empresa-TI107\Mobilitec-Services\obj\Debug\Mobilitec_Services.frmPesquisaFuncionarios.resources
+C:\Users\laercio.nsilva\Documents\Visual Studio 2019\Empresa-TI107\Empresa-TI107\Mobilitec-Services\obj\Debug\Mobilitec_Services.frmUsuarios.resources

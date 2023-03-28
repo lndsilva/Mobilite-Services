@@ -29,6 +29,7 @@ namespace Mobilitec_Services
         {
             InitializeComponent();
             desabilitarCampos();
+            escolhaSexo();
         }
 
         public frmClientes(string nome)
@@ -37,6 +38,15 @@ namespace Mobilitec_Services
             desabilitarCampos();
             txtNome.Text = nome;
             habilitarCamposPesquisa();
+            pesquisaPorNomeCliente(txtNome.Text);
+           
+        }
+
+        public void escolhaSexo()
+        {
+            cbbSexo.Items.Add("Masculino");
+            cbbSexo.Items.Add("Feminino");
+
         }
 
         private void frmClientes_Load(object sender, EventArgs e)
@@ -169,7 +179,7 @@ namespace Mobilitec_Services
                 limparCampos();
                 desabilitarCampos();
                 btnNovo.Enabled = true;
-                
+
             }
         }
         //Cadastro de cliente
@@ -210,15 +220,57 @@ namespace Mobilitec_Services
         }
         private void btnAlterar_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Registro alterado com sucesso.",
-                "Mensagem do sistema",
-                MessageBoxButtons.OK,
-                MessageBoxIcon.Information,
-                MessageBoxDefaultButton.Button1);
+            alterarClientes(Convert.ToInt32(txtCodigo.Text));
             desabilitarCampos();
             limparCampos();
 
         }
+
+        //Alterar clientes
+        public void alterarClientes(int codCli)
+        {
+            MySqlCommand comm = new MySqlCommand();
+            comm.CommandText = "update tbClientes set nome = @nome ,email = @email,cpf = @cpf,telefone = @telefone, sexo = @sexo, endereco = @endereco, numero = @numero,cep = @cep, bairro = @bairro, cidade = @cidade, estado = @estado where codCli = " + codCli + ";";
+            comm.CommandType = CommandType.Text;
+
+            comm.Parameters.Clear();
+            comm.Parameters.Add("@nome", MySqlDbType.VarChar, 100).Value = txtNome.Text;
+            comm.Parameters.Add("@email", MySqlDbType.VarChar, 100).Value = txtEmail.Text;
+            comm.Parameters.Add("@cpf", MySqlDbType.VarChar, 14).Value = mkbCPF.Text;
+            comm.Parameters.Add("@telefone", MySqlDbType.VarChar, 15).Value = mkbTelefone.Text;
+            comm.Parameters.Add("@sexo", MySqlDbType.VarChar, 10).Value = cbbSexo.Text;
+            comm.Parameters.Add("@endereco", MySqlDbType.VarChar, 100).Value = txtEndereco.Text;
+            comm.Parameters.Add("@numero", MySqlDbType.VarChar, 10).Value = txtNumero.Text;
+            comm.Parameters.Add("@cep", MySqlDbType.VarChar, 9).Value = mkbCEP.Text;
+            comm.Parameters.Add("@bairro", MySqlDbType.VarChar, 100).Value = txtBairro.Text;
+            comm.Parameters.Add("@cidade", MySqlDbType.VarChar, 100).Value = txtCidade.Text;
+            comm.Parameters.Add("@estado", MySqlDbType.VarChar, 2).Value = cbbEstado.Text;
+
+            comm.Connection = Conexao.obterConexao();
+            int res = comm.ExecuteNonQuery();
+            MessageBox.Show("Registro alterado com sucesso.");
+
+            Conexao.fecharConexao();
+
+        }
+
+        //excluir cliente
+        public void excluirCliente(int codCli)
+        {
+            MySqlCommand comm = new MySqlCommand();
+            comm.CommandText = "delete from tbClientes where codCli = @codCli;";
+            comm.CommandType = CommandType.Text;
+
+            comm.Parameters.Clear();
+            comm.Parameters.Add("@codcli", MySqlDbType.Int32, 11).Value = codCli;
+
+            comm.Connection = Conexao.obterConexao();
+
+            int resp = comm.ExecuteNonQuery();
+
+            Conexao.fecharConexao();
+        }
+
         private void btnExcluir_Click(object sender, EventArgs e)
         {
             DialogResult resposta = MessageBox.Show("Deseja excluir?",
@@ -229,6 +281,9 @@ namespace Mobilitec_Services
             if (resposta == DialogResult.Yes)
             {
                 //Vai excluir
+
+                excluirCliente(Convert.ToInt32(txtCodigo.Text));
+
                 MessageBox.Show("Excluido com sucesso",
                 "Mensagem do sistema", MessageBoxButtons.OK,
                 MessageBoxIcon.Information,
@@ -263,6 +318,41 @@ namespace Mobilitec_Services
                 buscaCEP(mkbCEP.Text);
                 txtNumero.Focus();
             }
+        }
+
+        private void txtNome_TextChanged(object sender, EventArgs e)
+        {
+            //pesquisaPorNomeCliente(txtNome.Text);
+        }
+
+        //Pesquisa porNomeCliente
+        public void pesquisaPorNomeCliente(string nome)
+        {
+            MySqlCommand comm = new MySqlCommand();
+            comm.CommandText = "select * from tbClientes where nome = '" + nome + "';";
+            comm.CommandType = CommandType.Text;
+            comm.Connection = Conexao.obterConexao();
+
+            MySqlDataReader DR;
+            DR = comm.ExecuteReader();
+
+            DR.Read();
+
+            txtCodigo.Text = DR.GetInt32(0).ToString();
+            txtNome.Text = DR.GetString(1);
+            txtEmail.Text = DR.GetString(2);
+            mkbCPF.Text = DR.GetString(3);
+            mkbTelefone.Text = DR.GetString(4);
+            cbbSexo.Text = DR.GetString(5);
+            txtEndereco.Text = DR.GetString(6);
+            txtNumero.Text = DR.GetString(7);
+            mkbCEP.Text = DR.GetString(8);
+            txtBairro.Text = DR.GetString(9);
+            txtCidade.Text = DR.GetString(10);
+            cbbEstado.Text = DR.GetString(11);
+
+            Conexao.fecharConexao();
+
         }
     }
 }

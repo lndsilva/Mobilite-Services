@@ -35,7 +35,7 @@ namespace Mobilitec_Services
             this.btnClientes = new System.Windows.Forms.Button();
             this.btnSAC = new System.Windows.Forms.Button();
             this.btnServicos = new System.Windows.Forms.Button();
-            this.btnContatos = new System.Windows.Forms.Button();
+            this.btnUsuarios = new System.Windows.Forms.Button();
             this.btnVoltar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -64,6 +64,7 @@ namespace Mobilitec_Services
             this.btnFuncionarios.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnFuncionarios.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnFuncionarios.UseVisualStyleBackColor = true;
+            this.btnFuncionarios.Click += new System.EventHandler(this.btnFuncionarios_Click);
             // 
             // btnClientes
             // 
@@ -105,18 +106,19 @@ namespace Mobilitec_Services
             this.btnServicos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnServicos.UseVisualStyleBackColor = true;
             // 
-            // btnContatos
+            // btnUsuarios
             // 
-            this.btnContatos.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnContatos.Image = ((System.Drawing.Image)(resources.GetObject("btnContatos.Image")));
-            this.btnContatos.Location = new System.Drawing.Point(37, 269);
-            this.btnContatos.Name = "btnContatos";
-            this.btnContatos.Size = new System.Drawing.Size(209, 190);
-            this.btnContatos.TabIndex = 3;
-            this.btnContatos.Text = "Con&tatos";
-            this.btnContatos.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnContatos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnContatos.UseVisualStyleBackColor = true;
+            this.btnUsuarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUsuarios.Image = ((System.Drawing.Image)(resources.GetObject("btnUsuarios.Image")));
+            this.btnUsuarios.Location = new System.Drawing.Point(37, 269);
+            this.btnUsuarios.Name = "btnUsuarios";
+            this.btnUsuarios.Size = new System.Drawing.Size(209, 190);
+            this.btnUsuarios.TabIndex = 3;
+            this.btnUsuarios.Text = "&Usuários";
+            this.btnUsuarios.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnUsuarios.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnUsuarios.UseVisualStyleBackColor = true;
+            this.btnUsuarios.Click += new System.EventHandler(this.btnUsuarios_Click);
             // 
             // btnVoltar
             // 
@@ -136,7 +138,7 @@ namespace Mobilitec_Services
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.btnSAC);
             this.Controls.Add(this.btnServicos);
-            this.Controls.Add(this.btnContatos);
+            this.Controls.Add(this.btnUsuarios);
             this.Controls.Add(this.btnClientes);
             this.Controls.Add(this.btnFuncionarios);
             this.Controls.Add(this.btnChamados);
@@ -158,7 +160,7 @@ namespace Mobilitec_Services
         private System.Windows.Forms.Button btnClientes;
         private System.Windows.Forms.Button btnSAC;
         private System.Windows.Forms.Button btnServicos;
-        private System.Windows.Forms.Button btnContatos;
+        private System.Windows.Forms.Button btnUsuarios;
         private System.Windows.Forms.Button btnVoltar;
     }
 }

@@ -51,5 +51,19 @@ namespace Mobilitec_Services
             abrir.Show();
             this.Hide();
         }
+
+        private void btnFuncionarios_Click(object sender, EventArgs e)
+        {
+            frmFuncionarios abrir = new frmFuncionarios();
+            abrir.Show();
+            this.Hide();
+        }
+
+        private void btnUsuarios_Click(object sender, EventArgs e)
+        {
+            frmUsuarios abrir = new frmUsuarios();
+            abrir.Show();
+            this.Hide();
+        }
     }
 }
