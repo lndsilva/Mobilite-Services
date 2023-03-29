@@ -164,6 +164,12 @@
     <Compile Include="frmPesquisaFuncionarios.Designer.cs">
       <DependentUpon>frmPesquisaFuncionarios.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmPesquisaUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPesquisaUsuarios.Designer.cs">
+      <DependentUpon>frmPesquisaUsuarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmSoma.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -229,6 +235,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmPesquisaFuncionarios.resx">
       <DependentUpon>frmPesquisaFuncionarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPesquisaUsuarios.resx">
+      <DependentUpon>frmPesquisaUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSoma.resx">
       <DependentUpon>frmSoma.cs</DependentUpon>

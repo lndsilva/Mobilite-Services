@@ -41,7 +41,7 @@ namespace Mobilitec_Services
             this.gpbInforCliente = new System.Windows.Forms.GroupBox();
             this.txtRedefineSenha = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtSenha = new System.Windows.Forms.TextBox();
             this.lblEmail = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.lblNome = new System.Windows.Forms.Label();
@@ -78,6 +78,7 @@ namespace Mobilitec_Services
             this.btnLimpar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnLimpar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnLimpar.UseVisualStyleBackColor = true;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
             // btnVoltar
             // 
@@ -105,6 +106,7 @@ namespace Mobilitec_Services
             this.btnPesquisar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnPesquisar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnPesquisar.UseVisualStyleBackColor = true;
+            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
             // 
             // btnExcluir
             // 
@@ -131,6 +133,7 @@ namespace Mobilitec_Services
             this.btnAlterar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAlterar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAlterar.UseVisualStyleBackColor = true;
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
             // btnCadastrar
             // 
@@ -144,6 +147,7 @@ namespace Mobilitec_Services
             this.btnCadastrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCadastrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCadastrar.UseVisualStyleBackColor = true;
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
             // btnNovo
             // 
@@ -163,7 +167,7 @@ namespace Mobilitec_Services
             // 
             this.gpbInforCliente.Controls.Add(this.txtRedefineSenha);
             this.gpbInforCliente.Controls.Add(this.label1);
-            this.gpbInforCliente.Controls.Add(this.txtEmail);
+            this.gpbInforCliente.Controls.Add(this.txtSenha);
             this.gpbInforCliente.Controls.Add(this.lblEmail);
             this.gpbInforCliente.Controls.Add(this.txtNome);
             this.gpbInforCliente.Controls.Add(this.lblNome);
@@ -196,15 +200,15 @@ namespace Mobilitec_Services
             this.label1.TabIndex = 6;
             this.label1.Text = "Redigitar senha";
             // 
-            // txtEmail
+            // txtSenha
             // 
-            this.txtEmail.Font = new System.Drawing.Font("Wingdings", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.txtEmail.Location = new System.Drawing.Point(102, 170);
-            this.txtEmail.MaxLength = 20;
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.PasswordChar = 'l';
-            this.txtEmail.Size = new System.Drawing.Size(272, 25);
-            this.txtEmail.TabIndex = 3;
+            this.txtSenha.Font = new System.Drawing.Font("Wingdings", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.txtSenha.Location = new System.Drawing.Point(102, 170);
+            this.txtSenha.MaxLength = 20;
+            this.txtSenha.Name = "txtSenha";
+            this.txtSenha.PasswordChar = 'l';
+            this.txtSenha.Size = new System.Drawing.Size(272, 25);
+            this.txtSenha.TabIndex = 3;
             // 
             // lblEmail
             // 
@@ -257,6 +261,7 @@ namespace Mobilitec_Services
             this.ClientSize = new System.Drawing.Size(788, 565);
             this.Controls.Add(this.pnlMenu);
             this.Controls.Add(this.gpbInforCliente);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "frmUsuarios";
@@ -281,7 +286,7 @@ namespace Mobilitec_Services
         private System.Windows.Forms.Button btnCadastrar;
         private System.Windows.Forms.Button btnNovo;
         private System.Windows.Forms.GroupBox gpbInforCliente;
-        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.TextBox txtSenha;
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Label lblNome;
