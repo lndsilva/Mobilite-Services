@@ -47,3 +47,6 @@ C:\Users\laercio.nsilva\Documents\Visual Studio 2019\Empresa-TI107\Empresa-TI107
 C:\Users\laercio.nsilva\Documents\Visual Studio 2019\Empresa-TI107\Empresa-TI107\Mobilitec-Services\obj\Debug\Mobilitec_Services.frmPesquisaFuncionarios.resources
 C:\Users\laercio.nsilva\Documents\Visual Studio 2019\Empresa-TI107\Empresa-TI107\Mobilitec-Services\obj\Debug\Mobilitec_Services.frmUsuarios.resources
 C:\Users\laercio.nsilva\Documents\Visual Studio 2019\Empresa-TI107\Empresa-TI107\Mobilitec-Services\obj\Debug\Mobilitec_Services.frmPesquisaUsuarios.resources
+C:\Users\laercio.nsilva\Documents\Visual Studio 2019\Empresa-TI107\Empresa-TI107\Mobilitec-Services\obj\Debug\Mobilitec_Services.frmTabList.resources
+C:\Users\laercio.nsilva\Documents\Visual Studio 2019\Empresa-TI107\Empresa-TI107\Mobilitec-Services\obj\Debug\Mobilitec_Services.frmCarregaDataGridDB.resources
+C:\Users\laercio.nsilva\Documents\Visual Studio 2019\Empresa-TI107\Empresa-TI107\Mobilitec-Services\obj\Debug\Mobilitec_Services.frmCadastraPessoa.resources

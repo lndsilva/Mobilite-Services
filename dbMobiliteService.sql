@@ -81,3 +81,10 @@ delete from tbClientes where codCli = 1;
 
 insert into tbFuncionarios (nome,email,cpf,telefone,sexo,endereco,numero,cep,bairro,cidade,estado)" +
                 "values(@nome,@email,@cpf,@telefone,@sexo,@endereco,@numero,@cep,@bairro,@cidade,@estado);
+
+
+select codfunc as 'Código',nome as 'Nome',email as 'E-mail',
+    cpf as 'CPF',telefone as 'Telefone',sexo as 'Sexo',
+    endereco as 'Endereço',numero as 'Número',cep as 'CEP',
+        bairro as 'Bairro',cidade as 'Cidade',estado as 'Estado'
+    from tbfuncionarios;

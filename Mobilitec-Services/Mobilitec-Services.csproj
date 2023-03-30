@@ -98,11 +98,23 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmCadastraPessoa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCadastraPessoa.Designer.cs">
+      <DependentUpon>frmCadastraPessoa.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmCalculadoraSimples.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmCalculadoraSimples.Designer.cs">
       <DependentUpon>frmCalculadoraSimples.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCarregaDataGridDB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCarregaDataGridDB.Designer.cs">
+      <DependentUpon>frmCarregaDataGridDB.cs</DependentUpon>
     </Compile>
     <Compile Include="frmClientes.cs">
       <SubType>Form</SubType>
@@ -188,6 +200,12 @@
     <Compile Include="frmStringFormat.Designer.cs">
       <DependentUpon>frmStringFormat.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmTabList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTabList.Designer.cs">
+      <DependentUpon>frmTabList.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmTestaBanco.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -203,8 +221,14 @@
     <Compile Include="Pessoa.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmCadastraPessoa.resx">
+      <DependentUpon>frmCadastraPessoa.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmCalculadoraSimples.resx">
       <DependentUpon>frmCalculadoraSimples.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCarregaDataGridDB.resx">
+      <DependentUpon>frmCarregaDataGridDB.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmClientes.resx">
       <DependentUpon>frmClientes.cs</DependentUpon>
@@ -247,6 +271,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmStringFormat.resx">
       <DependentUpon>frmStringFormat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTabList.resx">
+      <DependentUpon>frmTabList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTestaBanco.resx">
       <DependentUpon>frmTestaBanco.cs</DependentUpon>
