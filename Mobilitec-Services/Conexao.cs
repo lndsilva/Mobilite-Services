@@ -16,8 +16,16 @@ namespace Mobilitec_Services
         public static MySqlConnection obterConexao()
         {
             conn = new MySqlConnection(connString);
+            try
+            {
+                conn.Open();
+            }
+            catch (Exception)
+            {
 
-            conn.Open();
+                return conn;
+            }
+           
 
             return conn;
         }

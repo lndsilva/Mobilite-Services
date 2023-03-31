@@ -18,21 +18,35 @@ namespace Mobilitec_Services
             InitializeComponent();
         }
 
+        DataTable dt = new DataTable();
+
         private void btnCarregaDados_Click(object sender, EventArgs e)
         {
-            
+
+            dt.Rows.Clear();
 
             dgvFuncionarios.DataSource = null;
-            
-            MySqlDataAdapter da = new MySqlDataAdapter("select codfunc as 'Código',nome as 'Nome',email as 'E-mail', cpf as 'CPF', telefone as 'Telefone', sexo as 'Sexo',  endereco as 'Endereço', numero as 'Número', cep as 'CEP', bairro as 'Bairro', cidade as 'Cidade', estado as 'Estado' from tbfuncionarios;", Conexao.obterConexao());
 
-            DataTable dt = new DataTable();
-            
+            //string sql1 = "select * from tbFuncionarios;";
+
+
+            string sql = "select codfunc as 'Código',nome as 'Nome',email as 'E-mail', cpf as 'CPF',telefone as 'Telefone',sexo as 'Sexo',   endereco as 'Endereço',numero as 'Número',cep as 'CEP', bairro as 'Bairro',cidade as 'Cidade',estado as 'Estado' from tbfuncionarios; ";
+
+            MySqlDataAdapter da = new MySqlDataAdapter(sql, Conexao.obterConexao());
+
             da.Fill(dt);
+
 
             dgvFuncionarios.DataSource = dt;
 
             Conexao.fecharConexao();
+
+        }
+
+        private void btnLimpar_Click(object sender, EventArgs e)
+        {
+            dt.Rows.Clear();
+
 
         }
     }

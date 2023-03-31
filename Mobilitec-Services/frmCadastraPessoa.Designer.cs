@@ -163,6 +163,7 @@ namespace Mobilitec_Services
             this.dgvDadosPessoais.ReadOnly = true;
             this.dgvDadosPessoais.Size = new System.Drawing.Size(713, 230);
             this.dgvDadosPessoais.TabIndex = 6;
+            this.dgvDadosPessoais.SelectionChanged += new System.EventHandler(this.dgvDadosPessoais_SelectionChanged);
             // 
             // pnlCadastraPessoa
             // 

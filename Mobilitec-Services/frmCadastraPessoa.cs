@@ -35,6 +35,18 @@ namespace Mobilitec_Services
         {
             dt.Rows.Add(txtCodigo.Text, txtNome.Text, txtEmail.Text, mskCPF.Text, mskTelefone.Text);
             dgvDadosPessoais.DataSource = dt;
+            limparCampos();
+
+        }
+
+        public void limparCampos()
+        {
+            txtCodigo.Clear();
+            txtNome.Clear();
+            txtEmail.Clear();
+            mskCPF.Text = "";
+            mskTelefone.Text = "";
+            txtCodigo.Focus();
         }
 
         private void btnExcluir_Click(object sender, EventArgs e)
@@ -42,7 +54,8 @@ namespace Mobilitec_Services
             if (dgvDadosPessoais.CurrentRow != null)
             {
                 int linha = dgvDadosPessoais.CurrentCell.RowIndex;
-                dgvDadosPessoais.Rows.RemoveAt(linha);}
+                dgvDadosPessoais.Rows.RemoveAt(linha);
+            }
             else
             {
                 MessageBox.Show("Dados excluídos");
@@ -54,6 +67,23 @@ namespace Mobilitec_Services
         {
             dt.Rows.Clear();
             dgvDadosPessoais.DataSource = dt;
+        }
+
+        private void dgvDadosPessoais_SelectionChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                txtCodigo.Text = dgvDadosPessoais.CurrentRow.Cells[0].Value.ToString();
+                txtNome.Text = dgvDadosPessoais.CurrentRow.Cells[1].Value.ToString();
+                txtEmail.Text = dgvDadosPessoais.CurrentRow.Cells[2].Value.ToString();
+                mskCPF.Text = dgvDadosPessoais.CurrentRow.Cells[3].Value.ToString();
+                mskTelefone.Text = dgvDadosPessoais.CurrentRow.Cells[4].Value.ToString();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Dados inválidos!!!");
+            }
+
         }
     }
 }

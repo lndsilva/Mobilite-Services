@@ -32,6 +32,7 @@ namespace Mobilitec_Services
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCarregaDataGridDB));
             this.btnCarregaDados = new System.Windows.Forms.Button();
             this.dgvFuncionarios = new System.Windows.Forms.DataGridView();
+            this.btnLimpar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFuncionarios)).BeginInit();
             this.SuspendLayout();
             // 
@@ -47,17 +48,32 @@ namespace Mobilitec_Services
             // 
             // dgvFuncionarios
             // 
+            this.dgvFuncionarios.AllowUserToAddRows = false;
+            this.dgvFuncionarios.AllowUserToResizeColumns = false;
+            this.dgvFuncionarios.AllowUserToResizeRows = false;
             this.dgvFuncionarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvFuncionarios.Location = new System.Drawing.Point(14, 122);
             this.dgvFuncionarios.Name = "dgvFuncionarios";
+            this.dgvFuncionarios.RowHeadersVisible = false;
             this.dgvFuncionarios.Size = new System.Drawing.Size(773, 317);
             this.dgvFuncionarios.TabIndex = 1;
+            // 
+            // btnLimpar
+            // 
+            this.btnLimpar.Location = new System.Drawing.Point(263, 27);
+            this.btnLimpar.Name = "btnLimpar";
+            this.btnLimpar.Size = new System.Drawing.Size(210, 55);
+            this.btnLimpar.TabIndex = 2;
+            this.btnLimpar.Text = "Limpar";
+            this.btnLimpar.UseVisualStyleBackColor = true;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
             // frmCarregaDataGridDB
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnLimpar);
             this.Controls.Add(this.dgvFuncionarios);
             this.Controls.Add(this.btnCarregaDados);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
@@ -75,5 +91,6 @@ namespace Mobilitec_Services
 
         private System.Windows.Forms.Button btnCarregaDados;
         private System.Windows.Forms.DataGridView dgvFuncionarios;
+        private System.Windows.Forms.Button btnLimpar;
     }
 }
