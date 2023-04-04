@@ -38,7 +38,10 @@ namespace Mobilitec_Services
             this.btnPesquisaFoto = new System.Windows.Forms.Button();
             this.cbbPesquisaFoto = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.dgvFotos = new System.Windows.Forms.DataGridView();
+            this.btnCarregaDGV = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pcbFoto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFotos)).BeginInit();
             this.SuspendLayout();
             // 
             // btnExcluirFoto
@@ -141,11 +144,34 @@ namespace Mobilitec_Services
             this.label1.TabIndex = 28;
             this.label1.Text = "Código da Foto";
             // 
+            // dgvFotos
+            // 
+            this.dgvFotos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvFotos.Location = new System.Drawing.Point(712, 74);
+            this.dgvFotos.Name = "dgvFotos";
+            this.dgvFotos.Size = new System.Drawing.Size(283, 272);
+            this.dgvFotos.TabIndex = 29;
+            // 
+            // btnCarregaDGV
+            // 
+            this.btnCarregaDGV.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCarregaDGV.Location = new System.Drawing.Point(712, 366);
+            this.btnCarregaDGV.Name = "btnCarregaDGV";
+            this.btnCarregaDGV.Size = new System.Drawing.Size(129, 61);
+            this.btnCarregaDGV.TabIndex = 30;
+            this.btnCarregaDGV.Tag = "";
+            this.btnCarregaDGV.Text = "Carrega Fotos";
+            this.btnCarregaDGV.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnCarregaDGV.UseVisualStyleBackColor = true;
+            this.btnCarregaDGV.Click += new System.EventHandler(this.btnCarregaDGV_Click);
+            // 
             // frmCarregaFoto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(703, 359);
+            this.ClientSize = new System.Drawing.Size(1033, 559);
+            this.Controls.Add(this.btnCarregaDGV);
+            this.Controls.Add(this.dgvFotos);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cbbPesquisaFoto);
             this.Controls.Add(this.btnPesquisaFoto);
@@ -161,6 +187,7 @@ namespace Mobilitec_Services
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Carrega Foto";
             ((System.ComponentModel.ISupportInitialize)(this.pcbFoto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFotos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -176,5 +203,7 @@ namespace Mobilitec_Services
         private System.Windows.Forms.Button btnPesquisaFoto;
         private System.Windows.Forms.ComboBox cbbPesquisaFoto;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridView dgvFotos;
+        private System.Windows.Forms.Button btnCarregaDGV;
     }
 }

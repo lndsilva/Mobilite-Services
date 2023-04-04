@@ -78,13 +78,13 @@ namespace Mobilitec_Services
         private void cbbPesquisaFoto_SelectedIndexChanged(object sender, EventArgs e)
         {
             int selecao = Convert.ToInt32(cbbPesquisaFoto.SelectedItem.ToString());
-            buscaFoto(selecao);
+            //buscaFoto(selecao);
         }
 
-        public void buscaFoto(int codFoto)
+        public void carregaFoto()
         {
             MySqlCommand comm = new MySqlCommand();
-            comm.CommandText = "SELECT imagem from tbimagens WHERE codImg = " + codFoto + ";";
+            comm.CommandText = "SELECT imagem from tbimagens";
             comm.CommandType = CommandType.Text;
 
             comm.Connection = Conexao.obterConexao();
@@ -93,34 +93,63 @@ namespace Mobilitec_Services
 
             DR = comm.ExecuteReader();
 
-            DR.Read();
+            if (DR.Read())
+            {
+                string imagem = Convert.ToString(DateTime.Now.ToFileTime());
+                byte[] bimage = (byte[])DR["imagem"];
+                FileStream fs = new FileStream(imagem, FileMode.CreateNew, FileAccess.Write);
+                fs.Write(bimage, 0, bimage.Length - 1);
+                fs.Close();
+                pcbFoto.Image = Image.FromFile(imagem);
+            }
+            Conexao.fecharConexao();              
 
-            byte[] byteBlobData = (byte[])DR["imagem"];
-            pcbFoto.Image = ToImage(byteBlobData);
-
-
-
-            Conexao.fecharConexao();
 
 
         }
-        public static Image ToImage(byte[] data)
+
+
+
+        //public void buscaFoto(int codFoto)
+        //{
+        //    MySqlCommand comm = new MySqlCommand();
+        //    comm.CommandText = "SELECT imagem from tbimagens WHERE codImg = " + codFoto + ";";
+        //    comm.CommandType = CommandType.Text;
+
+        //    comm.Connection = Conexao.obterConexao();
+
+        //    MySqlDataReader DR;
+
+        //    DR = comm.ExecuteReader();
+
+        //    DR.Read();
+
+        //    byte[] byteBlobData = (byte[])DR["imagem"];
+        //    pcbFoto.Image = ToImage(byteBlobData);           
+
+        //    Conexao.fecharConexao();
+
+        //}
+        //public static Image ToImage(byte[] data)
+        //{
+        //if (data == null)
+        //{
+        //    return null;
+        //}
+
+        //Image img;
+        //MemoryStream stream = new MemoryStream(data);
+        //{
+        //    Image temp = Image.FromStream(stream);
+
+        //    img = new Bitmap(temp);
+        //
+        //    return img;
+        //}}
+
+        private void btnCarregaDGV_Click(object sender, EventArgs e)
         {
-            if (data == null)
-            {
-                return null;
-            }
-            
-            Image img;
-            
-            MemoryStream stream = new MemoryStream(data);
-            {
-                Image temp = Image.FromStream(stream);
-                
-                img = new Bitmap(temp);
-                
-            }
-            return img;
+            carregaFoto();
         }
     }
 }
